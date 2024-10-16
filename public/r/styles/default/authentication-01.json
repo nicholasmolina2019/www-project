@@ -1,0 +1,18 @@
+{
+  "name": "authentication-01",
+  "type": "registry:block",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "block/authentication-01.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\"\r\nimport {\r\n  Card,\r\n  CardContent,\r\n  CardDescription,\r\n  CardFooter,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"@/registry/default/ui/card\"\r\nimport { Input } from \"@/registry/default/ui/input\"\r\nimport { Label } from \"@/registry/default/ui/label\"\n\nexport default function LoginForm() {\r\n  return (\r\n    <Card className=\"w-full max-w-sm\">\r\n      <CardHeader>\r\n        <CardTitle className=\"text-2xl\">Login</CardTitle>\r\n        <CardDescription>\r\n          Enter your email below to login to your account.\r\n        </CardDescription>\r\n      </CardHeader>\r\n      <CardContent className=\"grid gap-4\">\r\n        <div className=\"grid gap-2\">\r\n          <Label htmlFor=\"email\">Email</Label>\r\n          <Input id=\"email\" type=\"email\" placeholder=\"m@example.com\" required />\r\n        </div>\r\n        <div className=\"grid gap-2\">\r\n          <Label htmlFor=\"password\">Password</Label>\r\n          <Input id=\"password\" type=\"password\" required />\r\n        </div>\r\n      </CardContent>\r\n      <CardFooter>\r\n        <Button className=\"w-full\">Sign in</Button>\r\n      </CardFooter>\r\n    </Card>\r\n  )\r\n}\r\n",
+      "type": "registry:block",
+      "target": ""
+    }
+  ]
+}

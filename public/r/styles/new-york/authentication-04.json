@@ -1,0 +1,18 @@
+{
+  "name": "authentication-04",
+  "type": "registry:block",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "block/authentication-04.tsx",
+      "content": "import Image from \"next/image\"\r\nimport Link from \"next/link\"\r\n\r\nimport { Button } from \"@/registry/new-york/ui/button\"\r\nimport { Input } from \"@/registry/new-york/ui/input\"\r\nimport { Label } from \"@/registry/new-york/ui/label\"\n\nexport default function Dashboard() {\r\n  return (\r\n    <div className=\"w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]\">\r\n      <div className=\"flex items-center justify-center py-12\">\r\n        <div className=\"mx-auto grid w-[350px] gap-6\">\r\n          <div className=\"grid gap-2 text-center\">\r\n            <h1 className=\"text-3xl font-bold\">Login</h1>\r\n            <p className=\"text-balance text-muted-foreground\">\r\n              Enter your email below to login to your account\r\n            </p>\r\n          </div>\r\n          <div className=\"grid gap-4\">\r\n            <div className=\"grid gap-2\">\r\n              <Label htmlFor=\"email\">Email</Label>\r\n              <Input\r\n                id=\"email\"\r\n                type=\"email\"\r\n                placeholder=\"m@example.com\"\r\n                required\r\n              />\r\n            </div>\r\n            <div className=\"grid gap-2\">\r\n              <div className=\"flex items-center\">\r\n                <Label htmlFor=\"password\">Password</Label>\r\n                <Link\r\n                  href=\"/forgot-password\"\r\n                  className=\"ml-auto inline-block text-sm underline\"\r\n                >\r\n                  Forgot your password?\r\n                </Link>\r\n              </div>\r\n              <Input id=\"password\" type=\"password\" required />\r\n            </div>\r\n            <Button type=\"submit\" className=\"w-full\">\r\n              Login\r\n            </Button>\r\n            <Button variant=\"outline\" className=\"w-full\">\r\n              Login with Google\r\n            </Button>\r\n          </div>\r\n          <div className=\"mt-4 text-center text-sm\">\r\n            Don&apos;t have an account?{\" \"}\r\n            <Link href=\"#\" className=\"underline\">\r\n              Sign up\r\n            </Link>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div className=\"hidden bg-muted lg:block\">\r\n        <Image\r\n          src=\"/placeholder.svg\"\r\n          alt=\"Image\"\r\n          width=\"1920\"\r\n          height=\"1080\"\r\n          className=\"h-full w-full object-cover dark:brightness-[0.2] dark:grayscale\"\r\n        />\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n",
+      "type": "registry:block",
+      "target": ""
+    }
+  ]
+}
